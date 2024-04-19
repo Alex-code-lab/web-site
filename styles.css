@@ -1,0 +1,107 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #fff;
+    padding: 20px 10%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* header h1 {
+    margin: 0;
+} */
+header h1 {
+    margin: 0;
+    font-size: 32px; /* Taille de la police */
+    color: #2a2a2a; /* Couleur de la police */
+    font-weight: bold; /* Poids de la police */
+    text-transform: uppercase; /* Texte en majuscules */
+    letter-spacing: 3px; /* Espacement des lettres */
+    text-align: center; /* Centrage du texte */
+    padding: 20px 0; /* Padding pour donner de l'espace autour du texte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée pour le texte */
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px 10%;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #ddd;
+}
+
+.social-links {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #333; /* Couleur des icônes */
+    font-size: 24px; /* Taille des icônes */
+}
+
+.social-links a:hover, .social-links a:focus {
+    color: #555; /* Couleur des icônes au survol et au focus */
+}
+
+/* Responsive design pour les écrans plus petits */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%; /* Les images prennent toute la largeur sur petits écrans */
+        margin-top: 10px;
+    }
+    
+    header h1 {
+        font-size: 24px; /* Taille de la police réduite pour les petits écrans */
+        letter-spacing: 1px; /* Réduction de l'espacement des lettres */
+    }
+
+    nav ul li {
+        display: block; /* Les éléments de navigation s'affichent les uns sous les autres */
+        text-align: center;
+        margin: 10px 0; /* Plus d'espace entre les éléments */
+    }
+
+    nav ul li a {
+        padding: 10px; /* Plus facile à cliquer sur un mobile */
+    }
+}
