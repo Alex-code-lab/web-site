@@ -1,153 +1,189 @@
 /* Styles de base pour le corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Définit le type de police pour le corps du document */
+    color: #333; /* Couleur du texte par défaut */
+    background: #f4f4f4; /* Couleur de fond de la page */
+    margin: 0; /* Supprime la marge extérieure par défaut */
+    padding: 0; /* Supprime le remplissage intérieur par défaut */
 }
 
 /* Styles pour l'en-tête global */
 header {
-    background: #fff;
-    padding: 20px 10%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #fff; /* Fond blanc pour l'en-tête */
+    padding: 20px 10%; /* Rembourrage autour du contenu de l'en-tête */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre portée pour l'en-tête */
 }
 
 /* Styles spécifiques pour le titre principal dans l'en-tête */
 header h1 {
-    margin: 0;
-    font-size: 32px; /* Taille de la police */
-    color: #2a2a2a; /* Couleur de la police */
-    font-weight: bold; /* Poids de la police */
-    text-transform: uppercase; /* Texte en majuscules */
-    letter-spacing: 3px; /* Espacement des lettres */
-    text-align: center; /* Centrage du texte */
-    padding: 20px 0; /* Padding pour donner de l'espace autour du texte */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée pour le texte */
+    margin: 0; /* Aucune marge pour maintenir l'alignement propre */
+    font-size: 32px; /* Taille de la police pour le titre */
+    color: #2a2a2a; /* Couleur foncée pour le texte du titre */
+    font-weight: bold; /* Rend le titre en gras */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+    letter-spacing: 3px; /* Espacement entre les lettres pour améliorer la lisibilité */
+    text-align: center; /* Centre le texte dans l'en-tête */
+    padding: 20px 0; /* Espacement vertical autour du titre */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte pour le démarquer */
 }
 
 /* Styles pour la liste de navigation principale */
 nav ul {
-    list-style: none; /* Suppression des puces */
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Aucun padding pour aligner strictement les liens */
+    margin: 0; /* Aucune marge pour empêcher tout décalage indésirable */
 }
 
 /* Styles pour chaque élément de liste dans la navigation */
 nav ul li {
-    display: inline-block; /* Disposition en ligne mais avec possibilité de définir des dimensions */
-    position: relative; /* Position relative pour positionner les sous-menus absolument par rapport à ces éléments */
-    margin-right: 20px;
+    display: inline-block; /* Les éléments de la liste sont affichés en ligne mais peuvent avoir du padding et margin */
+    position: relative; /* Nécessaire pour le positionnement des menus déroulants */
+    margin-right: 20px; /* Espacement entre les éléments du menu */
 }
 
 /* Styles pour les liens dans la navigation */
 nav ul li a {
-    text-decoration: none; /* Suppression du soulignement */
-    color: #333;
-    font-weight: bold; /* Texte en gras */
-    padding: 10px;
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #333; /* Couleur du texte des liens */
+    font-weight: bold; /* Texte en gras pour les liens */
+    padding: 10px; /* Rembourrage pour rendre les liens plus faciles à cliquer */
 }
 
 /* Styles pour les menus déroulants au survol */
 nav ul li.dropdown:hover .dropdown-content {
-    display: block; /* Affichage du sous-menu au survol */
+    display: block; /* Affiche le contenu du menu déroulant lors du survol */
 }
 
 /* Styles pour le contenu du menu déroulant caché */
 .dropdown-content {
-    display: none; /* Masqué par défaut */
-    position: absolute; /* Position absolue par rapport à son parent positionné relativement */
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    display: none; /* Cache par défaut le contenu du menu déroulant */
+    position: absolute; /* Positionne absolument par rapport à son parent `li` */
+    background-color: #f9f9f9; /* Fond clair pour le contenu déroulant */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Ombre pour le menu déroulant */
+    z-index: 1; /* S'assure que le menu déroulant se situe au-dessus d'autres éléments */
 }
 
 /* Styles pour les éléments de liste à l'intérieur des menus déroulants */
 .dropdown-content li {
-    display: block; /* Un élément par ligne */
+    display: block; /* Chaque élément de liste prend toute la largeur disponible */
 }
 
 /* Styles pour les liens à l'intérieur des menus déroulants */
 .dropdown-content li a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    color: black;
+    padding: 12px 16px; /* Rembourrage généreux pour faciliter le clic */
+    text-decoration: none; /* Pas de soulignement pour ces liens */
+    display:block; /* Les liens prennent toute la largeur du menu pour faciliter le clic */
+    text-align: left; /* Alignement du texte à gauche */
+    color: black; /* Texte noir pour une bonne lisibilité */
 }
 
 /* Effet de survol pour les liens à l'intérieur des menus déroulants */
 .dropdown-content li a:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Changement de fond au survol pour indiquer l'élément actif */
 }
 
 /* Styles généraux pour les sections de contenu */
 section {
-    padding: 20px 10%;
-    text-align: center;
+    padding: 20px 10%; /* Rembourrage uniforme pour toutes les sections */
+    text-align: center; /* Centre le texte et d'autres éléments dans les sections */
 }
 
 /* Styles pour la galerie d'images dans la section Portfolio */
 .gallery {
-    display: flex; /* Utilise Flexbox pour un alignement flexible des éléments enfants */
-    justify-content: space-around; /* Distribue l'espace autour des éléments pour un espacement uniforme */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si l'espace est insuffisant */
+    display: flex; /* Utilisation de Flexbox pour un alignement flexible */
+    justify-content: space-around; /* Répartit l'espace autour de chaque élément de la galerie */
+    flex-wrap: wrap; /* Permet aux éléments de la galerie de passer à la ligne suivante si nécessaire */
 }
 
 /* Styles pour les liens avec images dans la galerie */
 .gallery a.photo-link {
-    position: relative; /* Positionne relativement pour permettre le positionnement absolu des enfants */
-    display: inline-block; /* Affiche le lien comme un bloc en ligne, permettant la définition de largeur et de hauteur */
-    width: 30%; /* Définit la largeur de chaque lien à 30% du conteneur parent */
-    margin-top: 20px; /* Ajoute une marge en haut pour espacer les éléments verticalement */
+    position: relative; /* Nécessaire pour positionner le texte et les images correctement */
+    display: flex; /* Affichage en bloc mais en ligne */
+    width: 30%; /* Chaque lien de la galerie prend 30% de la largeur du conteneur */
+    margin-top: 20px; /* Espacement vertical pour séparer les lignes d'images */
 }
 
 /* Styles pour les images dans les liens de la galerie */
 .gallery img {
-    width: 100%; /* Les images prennent toute la largeur de leur conteneur parent */
-    display: block; /* Affiche l'image comme un bloc, ce qui aide à éviter les problèmes de ligne supplémentaire */
-    transition: opacity 0.3s ease; /* Anime l'opacité pour un effet visuel doux lors du survol */
+    width: 100%; /* Les images s'étendent pour remplir la largeur de leur conteneur */
+    display: block; /* Affichage en bloc pour éviter des problèmes d'espacement par défaut */
+    transition: opacity 0.3s ease; /* Transition douce pour l'opacité lors du survol */
 }
 
 /* Styles pour le texte caché sur les images de la galerie */
 .photo-text {
-    position: absolute; /* Position absolue par rapport au parent relatif */
-    top: 50%; /* Positionne le texte au milieu verticalement */
-    left: 50%; /* Positionne le texte au milieu horizontalement */
-    transform: translate(-50%, -50%); /* Décale le texte pour qu'il soit centré exactement au milieu */
-    color: white; /* Couleur du texte */
-    font-size: 24px; /* Taille de la police du texte */
+    position: absolute; /* Position absolue pour superposer le texte sur l'image */
+    top: 50%; /* Centre verticalement le texte */
+    left: 50%; /* Centre horizontalement le texte */
+    transform: translate(-50%, -50%); /* Ajustement fin pour centrer parfaitement le texte */
+    color: white; /* Couleur blanche pour le texte pour contraster avec les images sombres */
+    font-size: 24px; /* Taille de la police pour le texte */
     text-align: center; /* Centre le texte horizontalement */
-    visibility: hidden; /* Rend le texte invisible initialement */
-    opacity: 0; /* Rend le texte complètement transparent initialement */
+    visibility: hidden; /* Cache le texte par défaut */
+    opacity: 0; /* Rend le texte complètement transparent par défaut */
     transition: opacity 0.3s ease; /* Anime l'opacité pour un effet visuel doux lors du survol */
+    z-index: 3;
 }
 
 /* Styles pour révéler le texte au survol de l'image */
-.gallery a.photo-link:hover img {
-    opacity: 0.7; /* Réduit l'opacité de l'image pour atténuer légèrement l'image lors du survol */
-}
 .gallery a.photo-link:hover .photo-text {
     visibility: visible; /* Rend le texte visible lors du survol */
     opacity: 1; /* Rend le texte complètement opaque lors du survol */
 }
 
+.image-container {
+    position: relative;
+    display: inline-block; /* Ou block, selon la disposition souhaitée */
+    width: 100%; /* La largeur doit être cohérente avec les autres images */
+    height: auto; /* Ou une hauteur fixe, si nécessaire pour aligner */
+}
+
+.rotating-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Assure que l'image s'adapte à la hauteur du conteneur */
+    transition: opacity 1s ease-in-out;
+    z-index: 2; /* Le front doit avoir une valeur plus élevée que le back */
+}
+
+.rotating-image.back {
+    z-index: 1; /* S'assure que les images de fond sont derrière l'image de premier plan */
+}
+
+.rotating-image.front {
+    z-index: 2; /* Premier plan */
+    opacity: 1; /* Visible initialement */
+}
+
+/* Montre le texte lorsque l'image de premier plan est complètement transparente */
+.rotating-image.front:hover + .photo-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gallery a.photo-link:hover .photo-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Styles pour le pied de page */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #ddd;
+    text-align: center; /* Centre le contenu du pied de page */
+    padding: 20px 0; /* Rembourrage vertical pour le pied de page */
+    background: #ddd; /* Couleur de fond pour le pied de page */
 }
 
 /* Styles pour les liens des réseaux sociaux dans le pied de page */
 .social-links {
-    text-align: center;
-    padding: 10px 0;
+    text-align: center; /* Centre les liens sociaux */
+    padding: 10px 0; /* Rembourrage vertical pour les liens sociaux */
 }
+
 /* Styles pour les liens des réseaux sociaux dans le pied de page */
 .social-links a {
-    margin: 0 10px;
+    margin: 0 10px; /* Espacement horizontal entre les icônes */
     color: #333; /* Couleur des icônes */
     font-size: 24px; /* Taille des icônes */
 }
@@ -161,18 +197,18 @@ footer {
 @media (max-width: 768px) {
     .gallery img {
         width: 100%; /* Les images prennent toute la largeur sur petits écrans */
-        margin-top: 10px;
+        margin-top: 10px; /* Ajuste la marge supérieure pour les petits écrans */
     }
     header h1 {
-        font-size: 24px; /* Taille de la police réduite pour les petits écrans */
-        letter-spacing: 1px; /* Réduction de l'espacement des lettres */
+        font-size: 24px; /* Réduit la taille de la police du titre pour les petits écrans */
+        letter-spacing: 1px; /* Réduit l'espacement des lettres pour les petits écrans */
     }
     nav ul li {
-        display: block; /* Les éléments de navigation s'affichent les uns sous les autres */
-        text-align: center;
-        margin: 10px 0; /* Plus d'espace entre les éléments */
+        display: block; /* Affiche les éléments de navigation en bloc sur petits écrans */
+        text-align: center; /* Centre le texte de navigation sur petits écrans */
+        margin: 10px 0; /* Ajuste les marges verticales pour les petits écrans */
     }
     nav ul li a {
-        padding: 10px; /* Plus facile à cliquer sur un mobile */
+        padding: 10px; /* Augmente le rembourrage pour rendre les liens plus faciles à cliquer sur petits écrans */
     }
 }

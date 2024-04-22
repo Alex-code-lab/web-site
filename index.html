@@ -39,7 +39,7 @@
         <h2>Bienvenue</h2>
         <p>Découvrez mes travaux et projets photographiques.</p>
     </section>
-
+    
     <!-- Section portofoglio -->
     <section id="portfolio">
         <!-- Début de la section Portfolio avec un ID unique pour ciblage spécifique par CSS ou liens internes -->
@@ -48,13 +48,15 @@
     
         <div class="gallery">
             <!-- Conteneur pour la galerie d'images, utilisant une classe pour ciblage par CSS -->
-    
             <a href="/Users/souchaud/Documents/Autre/site_internet/pages/mariage.html" class="photo-link">
-                <!-- Lien vers la page de détails du mariage, classé pour ciblage spécifique et styles CSS -->
-                <img src="./images/page_principale/photo1.jpg" alt="Photo Mariage">
+            <!-- Lien vers la page de détails du mariage, classé pour ciblage spécifique et styles CSS -->
+                <div class="image-container">
+                    <img src="./images/mariage/photo1.jpg" alt="Photo Mariage" class="rotating-image back">
+                    <img src="./images/mariage/photo1.jpg" alt="Photo Mariage" class="rotating-image front">
+                    <span class="photo-text">Mariage</span>
+                    <!-- Texte caché qui apparaît lors du survol de l'image, décrivant la catégorie de l'image -->
+                </div>
                 <!-- Image représentant le mariage, avec chemin relatif et texte alternatif pour l'accessibilité -->
-                <span class="photo-text">Mariage</span>
-                <!-- Texte caché qui apparaît lors du survol de l'image, décrivant la catégorie de l'image -->
             </a>
             <!-- Fin du lien photo pour mariage -->
     
@@ -75,9 +77,9 @@
                 <!-- Texte caché qui apparaît lors du survol, donnant plus de contexte sur l'image -->
             </a>
             <!-- Fin du lien photo pour portraits -->
-    
         </div>
         <!-- Fin du conteneur de la galerie -->
+
     </section>
     <!-- Fin de la section Portfolio -->
     
@@ -92,6 +94,6 @@
         </div>
         <p>© 2024 Alexandre - Tous droits réservés</p>
     </footer>
-
+    <script src="script_images_changeantes.js"></script>
 </body>
 </html>
