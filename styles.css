@@ -1,4 +1,4 @@
-/* styles.css */
+/* Styles de base pour le corps de la page */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -7,15 +7,14 @@ body {
     padding: 0;
 }
 
+/* Styles pour l'en-tête global */
 header {
     background: #fff;
     padding: 20px 10%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* header h1 {
-    margin: 0;
-} */
+/* Styles spécifiques pour le titre principal dans l'en-tête */
 header h1 {
     margin: 0;
     font-size: 32px; /* Taille de la police */
@@ -26,81 +25,153 @@ header h1 {
     text-align: center; /* Centrage du texte */
     padding: 20px 0; /* Padding pour donner de l'espace autour du texte */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre portée pour le texte */
-
 }
 
+/* Styles pour la liste de navigation principale */
 nav ul {
-    list-style: none;
+    list-style: none; /* Suppression des puces */
     padding: 0;
+    margin: 0;
 }
 
+/* Styles pour chaque élément de liste dans la navigation */
 nav ul li {
-    display: inline;
+    display: inline-block; /* Disposition en ligne mais avec possibilité de définir des dimensions */
+    position: relative; /* Position relative pour positionner les sous-menus absolument par rapport à ces éléments */
     margin-right: 20px;
 }
 
+/* Styles pour les liens dans la navigation */
 nav ul li a {
-    text-decoration: none;
+    text-decoration: none; /* Suppression du soulignement */
     color: #333;
-    font-weight: bold;
+    font-weight: bold; /* Texte en gras */
+    padding: 10px;
 }
 
+/* Styles pour les menus déroulants au survol */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block; /* Affichage du sous-menu au survol */
+}
+
+/* Styles pour le contenu du menu déroulant caché */
+.dropdown-content {
+    display: none; /* Masqué par défaut */
+    position: absolute; /* Position absolue par rapport à son parent positionné relativement */
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Styles pour les éléments de liste à l'intérieur des menus déroulants */
+.dropdown-content li {
+    display: block; /* Un élément par ligne */
+}
+
+/* Styles pour les liens à l'intérieur des menus déroulants */
+.dropdown-content li a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: black;
+}
+
+/* Effet de survol pour les liens à l'intérieur des menus déroulants */
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styles généraux pour les sections de contenu */
 section {
     padding: 20px 10%;
     text-align: center;
 }
 
+/* Styles pour la galerie d'images dans la section Portfolio */
 .gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: flex; /* Utilise Flexbox pour un alignement flexible des éléments enfants */
+    justify-content: space-around; /* Distribue l'espace autour des éléments pour un espacement uniforme */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante si l'espace est insuffisant */
 }
 
+/* Styles pour les liens avec images dans la galerie */
+.gallery a.photo-link {
+    position: relative; /* Positionne relativement pour permettre le positionnement absolu des enfants */
+    display: inline-block; /* Affiche le lien comme un bloc en ligne, permettant la définition de largeur et de hauteur */
+    width: 30%; /* Définit la largeur de chaque lien à 30% du conteneur parent */
+    margin-top: 20px; /* Ajoute une marge en haut pour espacer les éléments verticalement */
+}
+
+/* Styles pour les images dans les liens de la galerie */
 .gallery img {
-    width: 30%;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%; /* Les images prennent toute la largeur de leur conteneur parent */
+    display: block; /* Affiche l'image comme un bloc, ce qui aide à éviter les problèmes de ligne supplémentaire */
+    transition: opacity 0.3s ease; /* Anime l'opacité pour un effet visuel doux lors du survol */
 }
 
+/* Styles pour le texte caché sur les images de la galerie */
+.photo-text {
+    position: absolute; /* Position absolue par rapport au parent relatif */
+    top: 50%; /* Positionne le texte au milieu verticalement */
+    left: 50%; /* Positionne le texte au milieu horizontalement */
+    transform: translate(-50%, -50%); /* Décale le texte pour qu'il soit centré exactement au milieu */
+    color: white; /* Couleur du texte */
+    font-size: 24px; /* Taille de la police du texte */
+    text-align: center; /* Centre le texte horizontalement */
+    visibility: hidden; /* Rend le texte invisible initialement */
+    opacity: 0; /* Rend le texte complètement transparent initialement */
+    transition: opacity 0.3s ease; /* Anime l'opacité pour un effet visuel doux lors du survol */
+}
+
+/* Styles pour révéler le texte au survol de l'image */
+.gallery a.photo-link:hover img {
+    opacity: 0.7; /* Réduit l'opacité de l'image pour atténuer légèrement l'image lors du survol */
+}
+.gallery a.photo-link:hover .photo-text {
+    visibility: visible; /* Rend le texte visible lors du survol */
+    opacity: 1; /* Rend le texte complètement opaque lors du survol */
+}
+
+/* Styles pour le pied de page */
 footer {
     text-align: center;
     padding: 20px 0;
     background: #ddd;
 }
 
+/* Styles pour les liens des réseaux sociaux dans le pied de page */
 .social-links {
     text-align: center;
     padding: 10px 0;
 }
-
+/* Styles pour les liens des réseaux sociaux dans le pied de page */
 .social-links a {
     margin: 0 10px;
     color: #333; /* Couleur des icônes */
     font-size: 24px; /* Taille des icônes */
 }
 
+/* Styles pour les liens des réseaux sociaux au survol et au focus */
 .social-links a:hover, .social-links a:focus {
     color: #555; /* Couleur des icônes au survol et au focus */
 }
 
-/* Responsive design pour les écrans plus petits */
+/* Styles adaptatifs pour les écrans plus petits */
 @media (max-width: 768px) {
     .gallery img {
         width: 100%; /* Les images prennent toute la largeur sur petits écrans */
         margin-top: 10px;
     }
-    
     header h1 {
         font-size: 24px; /* Taille de la police réduite pour les petits écrans */
         letter-spacing: 1px; /* Réduction de l'espacement des lettres */
     }
-
     nav ul li {
         display: block; /* Les éléments de navigation s'affichent les uns sous les autres */
         text-align: center;
         margin: 10px 0; /* Plus d'espace entre les éléments */
     }
-
     nav ul li a {
         padding: 10px; /* Plus facile à cliquer sur un mobile */
     }
