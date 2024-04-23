@@ -136,22 +136,24 @@ section {
     display: inline-block; /* Ou block, selon la disposition souhaitée */
     width: 100%; /* La largeur doit être cohérente avec les autres images */
     height: auto; /* Ou une hauteur fixe, si nécessaire pour aligner */
+    /* margin: auto; /* centre le conteneur si width est inférieure à 100% */
+    overflow: hidden; /* masque les contenus qui débordent */
+    display: inline-flex; /*inline-block?active le mode flexbox pour les enfants */
 }
 
-.image-container {
-    position: relative;
-    width: 100%; /* ou une valeur spécifique comme 300px */
-    height: auto; /* ou une valeur spécifique comme 200px */
-    margin: auto; /* centre le conteneur si width est inférieure à 100% */
-    overflow: hidden; /* masque les contenus qui débordent */
-    display: flex; /*inline-block?active le mode flexbox pour les enfants */
-    align-items: center; /* centre verticalement les enfants en mode flex */
-    justify-content: center; /* centre horizontalement les enfants en mode flex */
-    background: #FFF; /* couleur de fond blanche */
-    border: 1px solid #CCC; /* bordure grise */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* légère ombre */
-    transition: transform 0.3s ease; /* animation douce lors de la transformation */
-}
+/* .image-container { */
+    /* position: relative; */
+/*    width: 100%; /* ou une valeur spécifique comme 300px */
+ /*   height: auto; /* ou une valeur spécifique comme 200px */
+   /* margin: auto; /* centre le conteneur si width est inférieure à 100% */
+ /*   overflow: hidden; /* masque les contenus qui débordent */
+    /*display: inline-flex; /*inline-block?active le mode flexbox pour les enfants */
+    /*align-items: center; /* centre verticalement les enfants en mode flex */
+    /*justify-content: center; /* centre horizontalement les enfants en mode flex */
+    /*background: #ffffff00; /* couleur de fond blanche */
+    /*border: 0px solid #CCC; /* bordure grise */
+    /*box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1); /* légère ombre */
+/*}
 
 .rotating-image {
     position: absolute;
