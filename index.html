@@ -23,9 +23,9 @@
                 <li class="dropdown">
                     <a href="#portfolio">Portfolio</a>
                     <ul class="dropdown-content">
-                        <li><a href="/Users/souchaud/Documents/Autre/site_internet/pages/mariage.html">Mariage</a></li>
-                        <li><a href="autre.html">Autre</a></li>
-                        <li><a href="portraits.html">Portraits</a></li>
+                        <li><a href="./pages/mariage.html">Mariage</a></li>
+                        <li><a href="./pages/autre.html">Autre</a></li>
+                        <li><a href="./pages/portraits.html">Portraits</a></li>
                     </ul>
                 </li>
                 <!-- Lien modifié pour pointer vers le footer -->
@@ -48,11 +48,11 @@
     
         <div class="gallery">
             <!-- Conteneur pour la galerie d'images, utilisant une classe pour ciblage par CSS -->
-            <a href="/Users/souchaud/Documents/Autre/site_internet/pages/mariage.html" class="photo-link">
-            <!-- Lien vers la page de détails du mariage, classé pour ciblage spécifique et styles CSS -->
+            <a href="./pages/mariage.html" class="photo-link slideshow" data-category="mariage">
+            <!-- Lien vers la page "mariage", classé pour ciblage spécifique et styles CSS -->
                 <div class="image-container">
-                    <img src="./images/mariage/photo1.jpg" alt="Photo Mariage" class="rotating-image back">
-                    <img src="./images/mariage/photo1.jpg" alt="Photo Mariage" class="rotating-image front">
+                    <img src="./images/mariage/mariage1.jpg" alt="Photo Mariage" class="rotating-image back">
+                    <img src="./images/mariage/mariage2.jpg" alt="Photo Mariage" class="rotating-image front">
                     <span class="photo-text">Mariage</span>
                     <!-- Texte caché qui apparaît lors du survol de l'image, décrivant la catégorie de l'image -->
                 </div>
@@ -60,21 +60,24 @@
             </a>
             <!-- Fin du lien photo pour mariage -->
     
-            <a href="autre.html" class="photo-link">
-                <!-- Lien vers la page de détails pour d'autres types de photographies, classé pour styles CSS -->
-                <img src="./images/page_principale/photo2.jpg" alt="Photo Autre">
-                <!-- Image représentant d'autres types de travaux, avec chemin et alt text pour accessibilité -->
+            <a href="./pages/autre.html" class="photo-link">
+                <!-- <div class="image-container"> -->
+                <img src="./images/autre/autre1.jpg" alt="Photo Autre">
+                <!-- <img src="./images/autre/autre2.jpg" alt="Photo Autre" class="rotating-image front"> -->
                 <span class="photo-text">Autre</span>
-                <!-- Texte caché pour description supplémentaire, visible au survol -->
-            </a>
-            <!-- Fin du lien photo pour autres catégories -->
-    
-            <a href="portraits.html" class="photo-link">
+                <!-- </div> -->
+            </a>         
+            <!-- Fin du lien photo pour autre -->
+
+            <a href="./pages/portraits.html" class="photo-link slideshow" data-category="portraits">
                 <!-- Lien vers la page de portraits, avec classe pour styling spécifique -->
-                <img src="./images/page_principale/photo3.jpg" alt="Photo Portraits">
-                <!-- Image représentant la section portraits, avec chemin relatif et texte alternatif -->
-                <span class="photo-text">Portraits</span>
+                <div class="image-container">
+                    <img src="./images/portraits/portraits1.jpg" alt="Photo Portraits" class="rotating-image back">
+                    <img src="./images/portraits/portraits1.jpg" alt="Photo Portraits" class="rotating-image front">
+                    <!-- Image représentant la section portraits, avec chemin relatif et texte alternatif -->
+                    <span class="photo-text">Portraits</span>
                 <!-- Texte caché qui apparaît lors du survol, donnant plus de contexte sur l'image -->
+                </div>
             </a>
             <!-- Fin du lien photo pour portraits -->
         </div>
@@ -94,6 +97,6 @@
         </div>
         <p>© 2024 Alexandre - Tous droits réservés</p>
     </footer>
-    <script src="script_images_changeantes.js"></script>
+    <script src="./scriptjs.js"></script>
 </body>
 </html>
