@@ -144,7 +144,7 @@ section {
     height: auto; /* ou une valeur spécifique comme 200px */
     margin: auto; /* centre le conteneur si width est inférieure à 100% */
     overflow: hidden; /* masque les contenus qui débordent */
-    display: flex; /* inline-block?active le mode flexbox pour les enfants */
+    display: flex; /*inline-block?active le mode flexbox pour les enfants */
     align-items: center; /* centre verticalement les enfants en mode flex */
     justify-content: center; /* centre horizontalement les enfants en mode flex */
     background: #FFF; /* couleur de fond blanche */
