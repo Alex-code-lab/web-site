@@ -88,91 +88,64 @@ section {
     text-align: center; /* Centre le texte et d'autres éléments dans les sections */
 }
 
-/* Styles pour la galerie d'images dans la section Portfolio */
-.gallery {
-    display: flex; /* Utilisation de Flexbox pour un alignement flexible */
-    justify-content: space-around; /* Répartit l'espace autour de chaque élément de la galerie */
-    flex-wrap: wrap; /* Permet aux éléments de la galerie de passer à la ligne suivante si nécessaire */
+.photo-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-/* Styles pour les liens avec images dans la galerie */
-.gallery a.photo-link {
-    position: relative; /* Nécessaire pour positionner le texte et les images correctement */
-    display: flex; /* Affichage en bloc mais en ligne */
-    width: 30%; /* Chaque lien de la galerie prend 30% de la largeur du conteneur */
-    margin-top: 20px; /* Espacement vertical pour séparer les lignes d'images */
+/* Ce bloc concerne les images qui peuvent être zoomées.*/
+/* Chaque propriété CSS est conçue pour améliorer l'interactivité visuelle et la facilité d'utilisation.*/
+.zoomable {
+    width: 30%; /* Définit la largeur de chaque image pour occuper 30% de la largeur de leur conteneur, permettant à trois images de s'aligner côte à côte. */
+    transition: transform 0.3s ease, opacity 0.2s; /* Ajoute une animation douce lors du changement de la transformation et de l'opacité. Transformations en 0.3 secondes, opacité en 0.2 secondes. */
+    cursor: pointer; /* Change le curseur en un pointeur pour indiquer que l'élément est cliquable. */
+    opacity: 1; /* Définit l'opacité initiale à 100%, rendant l'image complètement opaque. */
 }
 
-/* Styles pour les images dans les liens de la galerie */
-.gallery img {
-    width: 100%; /* Les images s'étendent pour remplir la largeur de leur conteneur */
-    display: block; /* Affichage en bloc pour éviter des problèmes d'espacement par défaut */
-    transition: opacity 0.3s ease; /* Transition douce pour l'opacité lors du survol */
+/* Ce style s'applique lorsque l'utilisateur passe sa souris sur une image,
+donnant un effet de zoom immédiat pour une interaction visuelle: hover = flotter */
+.zoomable:hover {
+    transform: scale(1.35); /* Agrandit l'image de 35% lors du survol de la souris. */
 }
 
-/* Styles pour le texte caché sur les images de la galerie */
-.photo-text {
-    position: absolute; /* Position absolue pour superposer le texte sur l'image */
-    top: 50%; /* Centre verticalement le texte */
-    left: 50%; /* Centre horizontalement le texte */
-    transform: translate(-50%, -50%); /* Ajustement fin pour centrer parfaitement le texte */
-    color: white; /* Couleur blanche pour le texte pour contraster avec les images sombres */
-    font-size: 24px; /* Taille de la police pour le texte */
-    text-align: center; /* Centre le texte horizontalement */
-    visibility: hidden; /* Cache le texte par défaut */
-    opacity: 0; /* Rend le texte complètement transparent par défaut */
-    transition: opacity 0.3s ease; /* Anime l'opacité pour un effet visuel doux lors du survol */
-    z-index: 3;
+/* Ce style s'active lorsque l'utilisateur clique sur une image, permettant un zoom encore plus important. */
+.zoomable:active {
+    position: relative; /* Assure que l'image cliquée est positionnée relativement à son positionnement normal, nécessaire pour le z-index. */
+    z-index: 10; /* Augmente le z-index lors du clic pour s'assurer que l'image est au-dessus des autres éléments. */
+    transform: scale(2); /* Double la taille de l'image lorsqu'elle est cliquée. */
 }
 
-/* Styles pour révéler le texte au survol de l'image */
-.gallery a.photo-link:hover .photo-text {
-    visibility: visible; /* Rend le texte visible lors du survol */
-    opacity: 1; /* Rend le texte complètement opaque lors du survol */
+/* Ce bloc définit le style de l'overlay, qui est un fond semi-transparent qui couvre toute la fenêtre,*/
+/* pour mettre en avant l'image zoomée.*/
+.zoom-overlay {
+    position: fixed; /* Positionne l'overlay de manière fixe par rapport à la fenêtre du navigateur, le rendant indépendant du défilement. */
+    top: 0; /* Alignez le haut de l'overlay avec le haut de la fenêtre du navigateur. */
+    left: 0; /* Alignez le côté gauche de l'overlay avec le côté gauche de la fenêtre du navigateur. */
+    width: 100vw; /* La largeur de l'overlay est de 100% de la largeur de la fenêtre du navigateur. vw = Viewport Width. */
+    height: 100vh; /* La hauteur de l'overlay est de 100% de la hauteur de la fenêtre du navigateur. vh = Viewport Height. */
+    display: flex; /* Utilise Flexbox pour aligner les éléments à l'intérieur de l'overlay. */
+    justify-content: center; /* Centre les éléments horizontalement dans l'overlay. */
+    align-items: center; /* Centre les éléments verticalement dans l'overlay. */
+    background: rgba(10, 10, 0, 0.8); /* Définit un fond noir semi-transparent (80% d'opacité) pour l'overlay. */
+    z-index: 1050; /* S'assure que l'overlay est au-dessus des autres éléments de la page. */
+    cursor: pointer; /* Change le curseur en un pointeur pour indiquer que l'overlay est interactif. */
 }
 
-.image-container {
-    position: relative;
-    display: inline-block; /* Ou block, selon la disposition souhaitée */
-    width: 100%; /* La largeur doit être cohérente avec les autres images */
-    height: auto; /* Ou une hauteur fixe, si nécessaire pour aligner */
-    /* margin: auto; /* centre le conteneur si width est inférieure à 100% */
-    overflow: hidden; /* masque les contenus qui débordent */
-    display: inline-flex; /*inline-block?active le mode flexbox pour les enfants */
-    align-items: center; /* centre verticalement les enfants en mode flex */
-    /* justify-content: center; /* centre horizontalement les enfants en mode flex */
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1); /* légère ombre */
+
+/* Styles pour l'image zoomée dans l'overlay */
+.zoom-overlay img {
+    max-width: 90%; /* Définit la largeur maximale de l'image à 90% de la largeur de l'overlay pour garantir une marge autour de l'image. */
+    max-height: 80%; /* Définit la hauteur maximale de l'image à 80% de la hauteur de l'overlay pour garantir une marge autour de l'image. */
+    transition: transform 0.3s ease-in-out; /* Ajoute une transition douce pour les transformations de l'image. */
 }
 
-.rotating-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto; /* Assure que l'image s'adapte à la hauteur du conteneur */
-    transition: opacity 1s ease-in-out;
-    z-index: 2; /* Le front doit avoir une valeur plus élevée que le back */
+/* Ce style est utilisé pour cacher des éléments de manière initiale,
+souvent utilisé pour masquer l'overlay jusqu'à ce qu'une image soit cliquée.*/
+.hidden {
+    display: none; /* Cache les éléments avec la classe 'hidden' en ne les affichant pas. */
 }
 
-.rotating-image.back {
-    z-index: 1; /* S'assure que les images de fond sont derrière l'image de premier plan */
-}
-
-.rotating-image.front {
-    z-index: 2; /* Premier plan */
-    opacity: 1; /* Visible initialement */
-}
-
-/* Montre le texte lorsque l'image de premier plan est complètement transparente */
-.rotating-image.front:hover + .photo-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.gallery a.photo-link:hover .photo-text {
-    visibility: visible;
-    opacity: 1;
-}
 
 /* Styles pour le pied de page */
 footer {
@@ -225,6 +198,7 @@ footer {
 .social-links a[href="https://www.linkedin.com/in/alexandre-souchaud-9a5b2111a/"]:focus {
     color: #0e76a8; /* Couleur originale de LinkedIn */
 }
+
 /* Styles adaptatifs pour les écrans plus petits */
 @media (max-width: 768px) {
     .gallery img {
