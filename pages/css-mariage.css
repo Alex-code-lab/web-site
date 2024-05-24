@@ -88,64 +88,39 @@ section {
     text-align: center; /* Centre le texte et d'autres éléments dans les sections */
 }
 
-.photo-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+/* Styles pour la galerie d'images dans la section Portfolio */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
 }
 
-/* Ce bloc concerne les images qui peuvent être zoomées.*/
-/* Chaque propriété CSS est conçue pour améliorer l'interactivité visuelle et la facilité d'utilisation.*/
-.zoomable {
-    width: 30%; /* Définit la largeur de chaque image pour occuper 30% de la largeur de leur conteneur, permettant à trois images de s'aligner côte à côte. */
-    transition: transform 0.3s ease, opacity 0.2s; /* Ajoute une animation douce lors du changement de la transformation et de l'opacité. Transformations en 0.3 secondes, opacité en 0.2 secondes. */
-    cursor: pointer; /* Change le curseur en un pointeur pour indiquer que l'élément est cliquable. */
-    opacity: 1; /* Définit l'opacité initiale à 100%, rendant l'image complètement opaque. */
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.2s;
+    opacity: 1;
 }
 
-/* Ce style s'applique lorsque l'utilisateur passe sa souris sur une image,
-donnant un effet de zoom immédiat pour une interaction visuelle: hover = flotter */
-.zoomable:hover {
-    transform: scale(1.35); /* Agrandit l'image de 35% lors du survol de la souris. */
-}
-
-/* Ce style s'active lorsque l'utilisateur clique sur une image, permettant un zoom encore plus important. */
-.zoomable:active {
-    position: relative; /* Assure que l'image cliquée est positionnée relativement à son positionnement normal, nécessaire pour le z-index. */
-    z-index: 10; /* Augmente le z-index lors du clic pour s'assurer que l'image est au-dessus des autres éléments. */
-    transform: scale(2); /* Double la taille de l'image lorsqu'elle est cliquée. */
-}
-
-/* Ce bloc définit le style de l'overlay, qui est un fond semi-transparent qui couvre toute la fenêtre,*/
-/* pour mettre en avant l'image zoomée.*/
 .zoom-overlay {
-    position: fixed; /* Positionne l'overlay de manière fixe par rapport à la fenêtre du navigateur, le rendant indépendant du défilement. */
-    top: 0; /* Alignez le haut de l'overlay avec le haut de la fenêtre du navigateur. */
-    left: 0; /* Alignez le côté gauche de l'overlay avec le côté gauche de la fenêtre du navigateur. */
-    width: 100vw; /* La largeur de l'overlay est de 100% de la largeur de la fenêtre du navigateur. vw = Viewport Width. */
-    height: 100vh; /* La hauteur de l'overlay est de 100% de la hauteur de la fenêtre du navigateur. vh = Viewport Height. */
-    display: flex; /* Utilise Flexbox pour aligner les éléments à l'intérieur de l'overlay. */
-    justify-content: center; /* Centre les éléments horizontalement dans l'overlay. */
-    align-items: center; /* Centre les éléments verticalement dans l'overlay. */
-    background: rgba(10, 10, 0, 0.8); /* Définit un fond noir semi-transparent (80% d'opacité) pour l'overlay. */
-    z-index: 1050; /* S'assure que l'overlay est au-dessus des autres éléments de la page. */
-    cursor: pointer; /* Change le curseur en un pointeur pour indiquer que l'overlay est interactif. */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1050;
+    cursor: pointer;
 }
 
-
-/* Styles pour l'image zoomée dans l'overlay */
-.zoom-overlay img {
-    max-width: 90%; /* Définit la largeur maximale de l'image à 90% de la largeur de l'overlay pour garantir une marge autour de l'image. */
-    max-height: 80%; /* Définit la hauteur maximale de l'image à 80% de la hauteur de l'overlay pour garantir une marge autour de l'image. */
-    transition: transform 0.3s ease-in-out; /* Ajoute une transition douce pour les transformations de l'image. */
-}
-
-/* Ce style est utilisé pour cacher des éléments de manière initiale,
-souvent utilisé pour masquer l'overlay jusqu'à ce qu'une image soit cliquée.*/
 .hidden {
-    display: none; /* Cache les éléments avec la classe 'hidden' en ne les affichant pas. */
+    display: none;
 }
-
 
 /* Styles pour le pied de page */
 footer {
@@ -198,7 +173,6 @@ footer {
 .social-links a[href="https://www.linkedin.com/in/alexandre-souchaud-9a5b2111a/"]:focus {
     color: #0e76a8; /* Couleur originale de LinkedIn */
 }
-
 /* Styles adaptatifs pour les écrans plus petits */
 @media (max-width: 768px) {
     .gallery img {
