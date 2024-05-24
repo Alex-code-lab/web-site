@@ -20,4 +20,8 @@ document.querySelectorAll('.zoomable').forEach(img => {
         overlay.appendChild(clone);
         overlay.classList.remove('hidden');
     };
+
+    img.onmouseover = () => {
+        img.style.cursor = 'zoom-in';
+    };
 });
