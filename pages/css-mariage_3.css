@@ -1,29 +1,30 @@
 /* Styles de base pour le corps de la page */
 body {
     font-family: Arial, sans-serif; /* Définit le type de police pour le corps du document */
-    color: #f4f4f4; /* Couleur du texte par défaut */
-    background: #000; /* Couleur de fond noire */
+    color: #333; /* Couleur du texte par défaut */
+    background: rgba(240, 240, 240, 0.523); /* Couleur de fond de la page */
     margin: 0; /* Supprime la marge extérieure par défaut */
     padding: 0; /* Supprime le remplissage intérieur par défaut */
 }
 
 /* Styles pour l'en-tête global */
 header {
-    background: #000; /* Fond noir pour l'en-tête */
+    background: rgba(240, 240, 240, 0.83); /* Fond blanc pour l'en-tête */
     padding: 20px 10%; /* Rembourrage autour du contenu de l'en-tête */
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Ombre portée légère et blanche pour l'en-tête */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre portée pour l'en-tête */
 }
 
 /* Styles spécifiques pour le titre principal dans l'en-tête */
 header h1 {
     margin: 0; /* Aucune marge pour maintenir l'alignement propre */
     font-size: 32px; /* Taille de la police pour le titre */
-    color: #f4f4f4; /* Couleur claire pour le texte du titre */
+    color: #2a2a2a; /* Couleur foncée pour le texte du titre */
     font-weight: bold; /* Rend le titre en gras */
     text-transform: uppercase; /* Transforme le texte en majuscules */
     letter-spacing: 3px; /* Espacement entre les lettres pour améliorer la lisibilité */
     text-align: center; /* Centre le texte dans l'en-tête */
     padding: 20px 0; /* Espacement vertical autour du titre */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte pour le démarquer */
 }
 
 /* Styles pour la liste de navigation principale */
@@ -44,7 +45,7 @@ nav ul li {
 /* Styles pour les liens dans la navigation */
 nav ul li a {
     text-decoration: none; /* Supprime le soulignement des liens */
-    color: #f4f4f4; /* Couleur claire pour le texte des liens */
+    color: #3c3737; /* Couleur claire pour le texte des liens */
     font-weight: bold; /* Texte en gras pour les liens */
     padding: 10px; /* Rembourrage pour rendre les liens plus faciles à cliquer */
 }
@@ -110,7 +111,7 @@ section {
 
 .gallery img:hover {
     transform: scale(1.07); /* Zoom léger au survol */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Augmente l'ombre au survol */
+    box-shadow: 0 0 20px rgba(153, 147, 147, 0.3); /* Augmente l'ombre au survol */
 }
 
 
