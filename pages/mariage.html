@@ -57,33 +57,15 @@
             <img class="zoomable" src="../images/mariage/mariage4.jpg" alt="Description de photo4">
             <img class="zoomable" src="../images/mariage/mariage5.jpg" alt="Description de photo5">
             <img class="zoomable" src="../images/mariage/mariage6.jpg" alt="Description de photo6">
+            <img class="zoomable" src="../images/mariage/mariage7.jpg" alt="Description de photo1">
+            <img class="zoomable" src="../images/mariage/mariage8.jpg" alt="Description de photo2">
+            <img class="zoomable" src="../images/mariage/mariage9.jpg" alt="Description de photo3">
+            <img class="zoomable" src="../images/mariage/mariage10.jpg" alt="Description de photo4">
+            <img class="zoomable" src="../images/mariage/mariage11.jpg" alt="Description de photo5">
+            <img class="zoomable" src="../images/mariage/mariage12.jpg" alt="Description de photo6">
         </div>
         <!-- Ajoutez plus de lignes au besoin -->
     </section>
-
-    <section id="vide">
-        <h2>Vide</h2>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-        <p>Jours de mariage.</p>
-    </section>
-
     <!-- Scroll to Top Button -->
     <div class="cc-FloatingButtonBarContainer">
         <button class="cc-FloatingButtonBarContainer-button-scroll">
@@ -112,51 +94,6 @@
     <script src="../javascript/gallerie_js.js"></script>
     <script src="../javascript/javascript-zoom.js"></script>
     <script src="../javascript/javascript-scroll-to-top.js"></script>
-    <script>
-        // Script pour la fonctionnalité de zoom sur les images
-        document.addEventListener('DOMContentLoaded', function () {
-            const images = document.querySelectorAll('.zoomable');
-            const overlay = document.getElementById('zoom-overlay');
-            const prevButton = document.querySelector('.prev');
-            const nextButton = document.querySelector('.next');
-            let currentIndex;
-
-            function showImage(index) {
-                const img = images[index];
-                const clone = img.cloneNode();
-                clone.style.width = 'auto';
-                clone.style.maxWidth = '90%';
-                clone.style.maxHeight = '90%';
-                overlay.innerHTML = '';
-                overlay.appendChild(prevButton);
-                overlay.appendChild(clone);
-                overlay.appendChild(nextButton);
-                overlay.classList.remove('hidden');
-                currentIndex = index;
-            }
-
-            images.forEach((img, index) => {
-                img.onclick = () => showImage(index);
-            });
-
-            prevButton.onclick = (e) => {
-                e.stopPropagation();
-                if (currentIndex > 0) {
-                    showImage(currentIndex - 1);
-                }
-            };
-
-            nextButton.onclick = (e) => {
-                e.stopPropagation();
-                if (currentIndex < images.length - 1) {
-                    showImage(currentIndex + 1);
-                }
-            };
-
-            overlay.onclick = () => {
-                overlay.classList.add('hidden');
-            };
-        });
-    </script>
+    
 </body>
 </html>
