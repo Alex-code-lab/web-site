@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif; /* Définit le type de police pour le corps du document */
     color: #333; /* Couleur du texte par défaut */
-    background: rgba(240, 240, 240, 0.523); /* Couleur de fond de la page */
+    background: rgba(240, 240, 240, 0.60); /* Couleur de fond de la page */
     margin: 0; /* Supprime la marge extérieure par défaut */
     padding: 0; /* Supprime le remplissage intérieur par défaut */
 }
@@ -65,6 +65,22 @@ nav ul li {
     margin-right: 20px; /* Espacement entre les éléments du menu */
 }
 
+/* Styles pour la liste de navigation principale */
+nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Aucun padding pour aligner strictement les liens */
+    margin: 0; /* Aucune marge pour empêcher tout décalage indésirable */
+    text-align: center; /* Centre les éléments de navigation */
+}
+
+
+/* Styles pour chaque élément de liste dans la navigation */
+nav ul li {
+    display: inline-block; /* Les éléments de la liste sont affichés en ligne mais peuvent avoir du padding et margin */
+    position: relative; /* Nécessaire pour le positionnement des menus déroulants */
+    margin-right: 20px; /* Espacement entre les éléments du menu */
+}
+
 /* Styles pour les liens dans la navigation */
 nav ul li a {
     text-decoration: none; /* Supprime le soulignement des liens */
@@ -82,7 +98,7 @@ nav ul li.dropdown:hover .dropdown-content {
 .dropdown-content {
     display: none; /* Cache par défaut le contenu du menu déroulant */
     position: absolute; /* Positionne absolument par rapport à son parent `li` */
-    background-color: #222; /* Fond sombre pour le contenu déroulant */
+    background-color:  #f4f4f4; /* Fond sombre pour le contenu déroulant */
     box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Ombre légère pour le menu déroulant */
     z-index: 1; /* S'assure que le menu déroulant se situe au-dessus d'autres éléments */
 }
@@ -90,6 +106,10 @@ nav ul li.dropdown:hover .dropdown-content {
 /* Styles pour les éléments de liste à l'intérieur des menus déroulants */
 .dropdown-content li {
     display: block; /* Chaque élément de liste prend toute la largeur disponible */
+    list-style-type: square; /* Ajoute des puces de type carré */
+    list-style-position: inside; /* Positionne les puces à l'intérieur */
+    margin-left: 20px; /* Ajoute une marge pour aligner les puces correctement */
+    color: red; /* Définit la couleur des puces en rouge */
 }
 
 /* Styles pour les liens à l'intérieur des menus déroulants */
@@ -98,12 +118,12 @@ nav ul li.dropdown:hover .dropdown-content {
     text-decoration: none; /* Pas de soulignement pour ces liens */
     display: block; /* Les liens prennent toute la largeur du menu pour faciliter le clic */
     text-align: left; /* Alignement du texte à gauche */
-    color: #f4f4f4; /* Texte clair pour une bonne lisibilité */
+    color: #222; /* Texte clair pour une bonne lisibilité */
 }
 
 /* Effet de survol pour les liens à l'intérieur des menus déroulants */
 .dropdown-content li a:hover {
-    background-color: #444; /* Changement de fond au survol pour indiquer l'élément actif */
+    background-color: #847e7e; /* Changement de fond au survol pour indiquer l'élément actif */
 }
 
 /* Styles généraux pour les sections de contenu */
@@ -193,7 +213,6 @@ section {
     visibility: visible; /* Rend le texte visible lors du survol */
     opacity: 1; /* Rend le texte complètement opaque lors du survol */
 }
-
 
 .hidden {
     display: none;
