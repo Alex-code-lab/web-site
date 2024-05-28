@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site internet de Alexandre</title>
-    <link rel="stylesheet" href="css-mariage_4.css">
+    <link rel="stylesheet" href="css-mariage.css">
     <!-- Lien pour charger les icônes Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Lien pour le favicon -->
-    <link rel="icon" href="../logo/logo_mini-url.png" type="png">
 </head>
 <body>
 
     <!-- haut de page -->
     <header>
-        <div class="header-container">
-            <img src="../logo/logo.png" alt="Logo de Alexandre" class="logo">
-        </div>
-
+        <center><h1>Site internet de Alexandre</h1></center>
         <!-- Liens clicables de navigation -->
         <nav>
             <ul>
@@ -32,11 +27,8 @@
                         <li><a href="./portraits.html">Portraits</a></li>
                     </ul>
                 </li>
-                <li><a href="../jeux_de_rôles.html">Jeux de rôles</a></li>
-                <li><a href="../recherche.html">Recherches</a></li>
                 <!-- Lien modifié pour pointer vers le footer -->
                 <li><a href="#footer">Contact</a></li>
-
             </ul>
         </nav>
     </header>
@@ -102,61 +94,9 @@
         <p>© 2024 Alexandre - Tous droits réservés</p>
     </footer>
 
-    <div id="zoom-overlay" class="zoom-overlay hidden">
-        <span class="prev">&#10094;</span>
-        <span class="next">&#10095;</span>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
-    <script src="../javascript/gallerie_js.js"></script>
     <script src="../javascript/javascript-zoom.js"></script>
     <script src="../javascript/javascript-scroll-to-top.js"></script>
-    <script>
-        // Script pour la fonctionnalité de zoom sur les images
-        document.addEventListener('DOMContentLoaded', function () {
-            const images = document.querySelectorAll('.zoomable');
-            const overlay = document.getElementById('zoom-overlay');
-            const prevButton = document.querySelector('.prev');
-            const nextButton = document.querySelector('.next');
-            let currentIndex;
-
-            function showImage(index) {
-                const img = images[index];
-                const clone = img.cloneNode();
-                clone.style.width = 'auto';
-                clone.style.maxWidth = '90%';
-                clone.style.maxHeight = '90%';
-                overlay.innerHTML = '';
-                overlay.appendChild(prevButton);
-                overlay.appendChild(clone);
-                overlay.appendChild(nextButton);
-                overlay.classList.remove('hidden');
-                currentIndex = index;
-            }
-
-            images.forEach((img, index) => {
-                img.onclick = () => showImage(index);
-            });
-
-            prevButton.onclick = (e) => {
-                e.stopPropagation();
-                if (currentIndex > 0) {
-                    showImage(currentIndex - 1);
-                }
-            };
-
-            nextButton.onclick = (e) => {
-                e.stopPropagation();
-                if (currentIndex < images.length - 1) {
-                    showImage(currentIndex + 1);
-                }
-            };
-
-            overlay.onclick = () => {
-                overlay.classList.add('hidden');
-            };
-        });
-    </script>
 </body>
 </html>

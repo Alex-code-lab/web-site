@@ -1,7 +1,7 @@
 const categoryImages = {
-    mariage: ['./images/mariage/mariage1.jpg', './images/mariage/mariage2.jpg', './images/mariage/mariage3.jpg'],
-    autre: ['./images/autre/autre1.jpg', './images/autre/autre2.jpg', './images/autre/autre3.jpg'],
-    portraits: ['./images/portraits/portraits1.jpg', './images/portraits/portraits2.jpg', './images/portraits/portraits3.jpg']
+    mariage: ['../images/mariage/mariage1.jpg', '../images/mariage/mariage2.jpg', '../images/mariage/mariage3.jpg'],
+    autre: ['../images/autre/autre1.jpg', '../images/autre/autre2.jpg', '../images/autre/autre3.jpg'],
+    portraits: ['../images/portraits/portraits1.jpg', '../images/portraits/portraits2.jpg', '../images/portraits/portraits3.jpg']
 };
 
 let intervalIds = {};
