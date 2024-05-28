@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site internet de Alexandre</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien pour charger les icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- haut de page -->
+    <header>
+        <center><h1>Site internet de Alexandre</h1></center>
+        <!-- Liens clicable de navigation -->
+        <nav>
+            <ul>
+                <!-- Lien modifié pour pointer vers le début du site -->
+                <li><a href="#accueil">Accueil</a></li>
+                <!-- liste dépliable du portofoglio vers les autres pages -->
+                <li class="dropdown">
+                    <a href="#portfolio">Portfolio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./pages/mariage.html">Mariage</a></li>
+                        <li><a href="./pages/autre.html">Autre</a></li>
+                        <li><a href="./pages/portraits.html">Portraits</a></li>
+                    </ul>
+                </li>
+                <!-- Lien modifié pour pointer vers le footer -->
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Bienvenue -->
+    <section id="accueil">
+        <h2>Bienvenue</h2>
+        <p>Découvrez mes travaux et projets photographiques.</p>
+    </section>
+    
+    <!-- Section portofoglio -->
+    <section id="portfolio">
+        <!-- Début de la section Portfolio avec un ID unique pour ciblage spécifique par CSS ou liens internes -->
+        <h2>Portfolio</h2>
+        <!-- Titre de la section Portfolio -->
+    
+        <div class="gallery">
+            <!-- Conteneur pour la galerie d'images, utilisant une classe pour ciblage par CSS -->
+            <a href="./pages/mariage.html" class="photo-link slideshow" data-category="mariage">
+            <!-- Lien vers la page "mariage", classé pour ciblage spécifique et styles CSS -->
+                <div class="image-container">
+                    <img src="./images/mariage/mariage1.jpg" alt="Photo Mariage" class="rotating-image back">
+                    <img src="./images/mariage/mariage2.jpg" alt="Photo Mariage" class="rotating-image front">
+                    <span class="photo-text">Mariage</span>
+                    <!-- Texte caché qui apparaît lors du survol de l'image, décrivant la catégorie de l'image -->
+                </div>
+                <!-- Image représentant le mariage, avec chemin relatif et texte alternatif pour l'accessibilité -->
+            </a>
+            <!-- Fin du lien photo pour mariage -->
+    
+
+            <a href="./pages/autre.html" class="photo-link slideshow" data-category="autre">
+                <div class="image-container">
+                    <img src="./images/autre/autre1.jpg" alt="Photo Autre" class="rotation-image back">
+                    <img src="./images/autre/autre2.jpg" alt="Photo Autre" class="rotation-image front">
+                    <span class="photo-text">Autre</span>
+                </div>
+            </a>
+            <!-- Fin du lien photo pour autre -->
+
+
+            <a href="./pages/portraits.html" class="photo-link slideshow" data-category="portraits">
+                <!-- Lien vers la page de portraits, avec classe pour styling spécifique -->
+                <div class="image-container">
+                    <img src="./images/portraits/portraits1.jpg" alt="Photo Portraits" class="rotating-image back">
+                    <img src="./images/portraits/portraits2.jpg" alt="Photo Portraits" class="rotating-image front">
+                    <!-- Image représentant la section portraits, avec chemin relatif et texte alternatif -->
+                    <span class="photo-text">Portraits</span>
+                <!-- Texte caché qui apparaît lors du survol, donnant plus de contexte sur l'image -->
+                </div>
+            </a>
+            <!-- Fin du lien photo pour portraits -->
+        
+        </div>
+        <!-- Fin du conteneur de la galerie -->
+
+    </section>
+    <!-- Fin de la section Portfolio -->
+    
+
+    <!-- Pied de page -->
+    <footer id="footer">
+        <div class="social-links">
+            <a href="https://www.instagram.com/AlexSouch/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/votre_username/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="mailto:alexandre.souchaud91@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/alexandre-souchaud-9a5b2111a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>© 2024 Alexandre - Tous droits réservés</p>
+    </footer>
+   
+    <script src="./scriptjs.js"></script>
+</body>
+</html>

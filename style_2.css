@@ -1,0 +1,273 @@
+/* Styles de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif; /* Définit le type de police pour le corps du document */
+    color: #333; /* Couleur du texte par défaut */
+    background: rgba(240, 240, 240, 0.523); /* Couleur de fond de la page */
+    margin: 0; /* Supprime la marge extérieure par défaut */
+    padding: 0; /* Supprime le remplissage intérieur par défaut */
+}
+
+/* Styles pour l'en-tête global */
+header {
+    background: rgba(240, 240, 240, 0.83); /* Fond blanc pour l'en-tête */
+    padding: 20px 10%; /* Rembourrage autour du contenu de l'en-tête */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre portée pour l'en-tête */
+}
+
+/* Styles spécifiques pour le titre principal dans l'en-tête */
+header h1, .header-container h1 {
+    margin: 0; /* Aucune marge pour maintenir l'alignement propre */
+    font-size: 32px; /* Taille de la police pour le titre */
+    color: #2a2a2a; /* Couleur foncée pour le texte du titre */
+    font-weight: bold; /* Rend le titre en gras */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+    letter-spacing: 3px; /* Espacement entre les lettres pour améliorer la lisibilité */
+    text-align: center; /* Centre le texte dans l'en-tête */
+    padding: 20px 0; /* Espacement vertical autour du titre */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre légère pour le texte pour le démarquer */
+}
+
+/* Styles pour le conteneur de l'en-tête */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer horizontalement les éléments */
+    margin-bottom: 20px; /* Espace supplémentaire en bas */
+}
+
+.header-container .subtitle {
+    font-size: 18px; /* Ajustez la taille du texte selon vos besoins */
+    color: #2a2a2a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour le logo */
+.logo {
+    width: 300px; /* Ajustez la taille du logo selon vos besoins */
+    height: auto;
+    margin-right: 20px; /* Espacement entre le logo et le titre */
+}
+
+/* Styles pour la liste de navigation principale */
+nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Aucun padding pour aligner strictement les liens */
+    margin: 0; /* Aucune marge pour empêcher tout décalage indésirable */
+    text-align: center; /* Centre les éléments de navigation */
+}
+
+/* Styles pour chaque élément de liste dans la navigation */
+nav ul li {
+    display: inline-block; /* Les éléments de la liste sont affichés en ligne mais peuvent avoir du padding et margin */
+    position: relative; /* Nécessaire pour le positionnement des menus déroulants */
+    margin-right: 20px; /* Espacement entre les éléments du menu */
+}
+
+/* Styles pour les liens dans la navigation */
+nav ul li a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: #3c3737; /* Couleur claire pour le texte des liens */
+    font-weight: bold; /* Texte en gras pour les liens */
+    padding: 10px; /* Rembourrage pour rendre les liens plus faciles à cliquer */
+}
+
+/* Styles pour les menus déroulants au survol */
+nav ul li.dropdown:hover .dropdown-content {
+    display: block; /* Affiche le contenu du menu déroulant lors du survol */
+}
+
+/* Styles pour le contenu du menu déroulant caché */
+.dropdown-content {
+    display: none; /* Cache par défaut le contenu du menu déroulant */
+    position: absolute; /* Positionne absolument par rapport à son parent `li` */
+    background-color: #222; /* Fond sombre pour le contenu déroulant */
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2); /* Ombre légère pour le menu déroulant */
+    z-index: 1; /* S'assure que le menu déroulant se situe au-dessus d'autres éléments */
+}
+
+/* Styles pour les éléments de liste à l'intérieur des menus déroulants */
+.dropdown-content li {
+    display: block; /* Chaque élément de liste prend toute la largeur disponible */
+}
+
+/* Styles pour les liens à l'intérieur des menus déroulants */
+.dropdown-content li a {
+    padding: 12px 16px; /* Rembourrage généreux pour faciliter le clic */
+    text-decoration: none; /* Pas de soulignement pour ces liens */
+    display: block; /* Les liens prennent toute la largeur du menu pour faciliter le clic */
+    text-align: left; /* Alignement du texte à gauche */
+    color: #f4f4f4; /* Texte clair pour une bonne lisibilité */
+}
+
+/* Effet de survol pour les liens à l'intérieur des menus déroulants */
+.dropdown-content li a:hover {
+    background-color: #444; /* Changement de fond au survol pour indiquer l'élément actif */
+}
+
+/* Styles généraux pour les sections de contenu */
+section {
+    padding: 20px 10%; /* Rembourrage uniforme pour toutes les sections */
+    text-align: center; /* Centre le texte et d'autres éléments dans les sections */
+}
+
+/* Styles pour la galerie d'images dans la section Portfolio */
+.gallery {
+    display: flex; /* Utilisation de Flexbox pour un alignement flexible */
+    justify-content: space-around; /* Répartit l'espace autour de chaque élément de la galerie */
+    flex-wrap: wrap; /* Permet aux éléments de la galerie de passer à la ligne suivante si nécessaire */
+}
+
+/* Styles pour les liens avec images dans la galerie */
+.gallery a.photo-link {
+    position: relative; /* Nécessaire pour positionner le texte et les images correctement */
+    display: flex; /* Affichage en bloc mais en ligne */
+    width: 30%; /* Chaque lien de la galerie prend 30% de la largeur du conteneur */
+    margin-top: 20px; /* Espacement vertical pour séparer les lignes d'images */
+}
+
+/* Styles pour les images dans les liens de la galerie */
+.gallery img {
+    width: 100%; /* Les images s'étendent pour remplir la largeur de leur conteneur */
+    display: block; /* Affichage en bloc pour éviter des problèmes d'espacement par défaut */
+    transition: opacity 0.3s ease; /* Transition douce pour l'opacité lors du survol */
+}
+
+/* Styles pour le texte caché sur les images de la galerie */
+.photo-text {
+    position: absolute; /* Position absolue pour superposer le texte sur l'image */
+    top: 50%; /* Centre verticalement le texte */
+    left: 50%; /* Centre horizontalement le texte */
+    transform: translate(-50%, -50%); /* Ajustement fin pour centrer parfaitement le texte */
+    color: white; /* Couleur blanche pour le texte pour contraster avec les images sombres */
+    font-size: 34px; /* Taille de la police pour le texte */
+    font-weight: bold; /* Rend le texte en gras */
+    text-align: center; /* Centre le texte horizontalement */
+    visibility: hidden; /* Cache le texte par défaut */
+    opacity: 0; /* Rend le texte complètement transparent par défaut */
+    transition: opacity 0.3s ease; /* Anime l'opacité pour un effet visuel doux lors du survol */
+    z-index: 3;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; /* Ou block, selon la disposition souhaitée */
+    width: 100%; /* La largeur doit être cohérente avec les autres images */
+    height: auto; /* Ou une hauteur fixe, si nécessaire pour aligner */
+    /* margin: auto; /* centre le conteneur si width est inférieure à 100% */
+    overflow: hidden; /* masque les contenus qui débordent */
+    display: inline-flex; /*inline-block?active le mode flexbox pour les enfants */
+    align-items: center; /* centre verticalement les enfants en mode flex */
+    /* justify-content: center; /* centre horizontalement les enfants en mode flex */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1); /* légère ombre */
+}
+
+.rotating-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Assure que l'image s'adapte à la hauteur du conteneur */
+    transition: opacity 1s ease-in-out;
+    z-index: 2; /* Le front doit avoir une valeur plus élevée que le back */
+}
+
+.rotating-image.back {
+    z-index: 1; /* S'assure que les images de fond sont derrière l'image de premier plan */
+}
+
+.rotating-image.front {
+    z-index: 2; /* Premier plan */
+    opacity: 1; /* Visible initialement */
+}
+
+/* Montre le texte lorsque l'image de premier plan est complètement transparente */
+.rotating-image.front:hover + .photo-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styles pour révéler le texte au survol de l'image */
+.gallery a.photo-link:hover .photo-text {
+    visibility: visible; /* Rend le texte visible lors du survol */
+    opacity: 1; /* Rend le texte complètement opaque lors du survol */
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Styles pour le pied de page */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #111;
+    color: #f4f4f4;
+}
+
+/* Styles pour les liens des réseaux sociaux dans le pied de page */
+.social-links {
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Styles pour les liens des réseaux sociaux dans le pied de page */
+.social-links a {
+    margin: 0 10px;
+    color: #333; /* Couleur du texte par défaut */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Styles pour les liens des réseaux sociaux au survol et au focus */
+.social-links a:hover, .social-links a:focus {
+    color: inherit;
+}
+
+/* Styles spécifiques pour chaque icône */
+
+/* Instagram */
+.social-links a[href="https://www.instagram.com/AlexSouch/"]:hover,
+.social-links a[href="https://www.instagram.com/AlexSouch/"]:focus {
+    color: #bc2a8d;
+}
+
+/* Facebook */
+.social-links a[href="https://www.facebook.com/votre_username/"]:hover,
+.social-links a[href="https://www.facebook.com/votre_username/"]:focus {
+    color: #1877f2;
+}
+
+/* Email */
+.social-links a[href="mailto:alexandre.souchaud91@gmail.com"]:hover,
+.social-links a[href="mailto:alexandre.souchaud91@gmail.com"]:focus {
+    color: #ea4335;
+}
+
+/* LinkedIn */
+.social-links a[href="https://www.linkedin.com/in/alexandre-souchaud-9a5b2111a/"]:hover,
+.social-links a[href="https://www.linkedin.com/in/alexandre-souchaud-9a5b2111a/"]:focus {
+    color: #0e76a8;
+}
+
+/* Styles adaptatifs pour les écrans plus petits */
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%;
+        margin-top: 10px;
+    }
+    header h1 {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+    nav ul li a {
+        padding: 10px;
+    }
+}
